@@ -89,7 +89,6 @@ class RegularizedLogisticRegression():
 
 		return accuracy
 
-
 	def predict(self, X):
 		X = X.T
 
