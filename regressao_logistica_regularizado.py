@@ -22,7 +22,8 @@ class RegularizedLogisticRegression():
 
 	#função de custo: cross-entropy
 	def loss_function(self, Y, sigmoid_z, Lambda, m):
-		loss = -np.sum(np.multiply(Y,np.log(sigmoid_z)) + np.multiply(1-Y,np.log(1-sigmoid_z)))/m + np.multiply(np.sum(np.power(self.theta_n,2)), Lambda)
+        # VERIFICAR SE A PARTE DA REGULARIZAÇÃO ESTÁ CERTA
+		loss = -np.sum(np.multiply(Y,np.log(sigmoid_z)) + np.multiply(1-Y,np.log(1-sigmoid_z)))/m + np.multiply(np.sum(np.power(self.theta_n,2)), Lambda)/M
 
 		return loss
 
