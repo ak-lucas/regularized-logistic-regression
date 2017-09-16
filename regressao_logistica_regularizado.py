@@ -89,6 +89,9 @@ class RegularizedLogisticRegression():
 		accuracy =  float(m - np.sum(np.logical_xor(Y_pred, Y)))/m
 
 		return accuracy
+    
+	def binary_error(self, X, Y):
+		return 1 - self.accuracy_score(X,Y)
 
 	def predict(self, X):
 		X = X.T
